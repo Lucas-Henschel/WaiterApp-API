@@ -18,7 +18,7 @@ mongoose
     app.use(router);
 
     app.listen(port, () => {
-      console.log(`🚀 Server is running on http:localhost${port}`);
+      console.log(`🚀 Server is running on http://localhost:${port}`);
     });
   })
   .catch(() => console.log("erro ao se conectar mongo"));
