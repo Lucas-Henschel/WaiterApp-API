@@ -9,6 +9,7 @@ import { listProductsByCategory } from "./app/useCases/categories/listProductsBy
 
 import { listProduct } from "./app/useCases/products/listProducts";
 import { createProduct } from "./app/useCases/products/createProduct";
+import { deleteProduct } from "./app/useCases/products/deleteProduct";
 
 import { listOrders } from "./app/useCases/orders/listOrders";
 import { createOrder } from "./app/useCases/orders/createOrder";
@@ -39,6 +40,9 @@ router.get("/products", listProduct);
 
 // Create products
 router.post("/products", upload.single("image"), createProduct);
+
+// Delete product
+router.delete("/products/:productId", deleteProduct);
 
 // Get products by category
 router.get("/categories/:categoryId/products", listProductsByCategory);
